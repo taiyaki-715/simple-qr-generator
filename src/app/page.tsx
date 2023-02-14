@@ -9,21 +9,21 @@ export default function Home() {
   return (
     <div className={"flex flex-col md:flex-row md:items-start w-screen p-8 gap-8 items-center bg-gray-100 flex-1"}>
       <textarea
-          onChange={(event) => setValue(event.target.value)}
-          className={"rounded w-full resize-none p-2 h-full"}
-          rows={5}
-          placeholder={"Type here to make QR code"}
-      ></textarea>
-        <div className={"flex flex-col w-full gap-8 items-center"}>
+        onChange={(event) => setValue(event.target.value)}
+        className={"rounded w-full resize-none p-2 h-full"}
+        rows={5}
+        placeholder={"Type here to make QR code"}
+      >
+      </textarea>
+      <div className={"flex flex-col w-full gap-8 items-center"}>
         <QRCode
-            value={value}
-            className={"w-full bg-white rounded py-8" + (value ? "" : " blur")}
+          value={value}
+          className={"w-full bg-white rounded py-8" + (value ? "" : " blur")}
         />
-            <DownloadButton
-            isEnabled={true}
-            linkURL={value}
-            />
-        </div>
+        <DownloadButton
+          linkURL={value}
+        />
+      </div>
     </div>
   )
 }
