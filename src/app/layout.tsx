@@ -1,5 +1,6 @@
 import './globals.css'
 import Header from "./Header"
+import { AnalyticsWrapper } from "@/app/components/analytics";
 
 export default function RootLayout({
   children,
@@ -12,6 +13,7 @@ export default function RootLayout({
       <body className={"flex flex-col h-screen"}>
           <Header/>
           {children}
+          <AnalyticsWrapper />
       </body>
     </html>
   )
