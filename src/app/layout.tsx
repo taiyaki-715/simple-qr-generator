@@ -1,6 +1,6 @@
 import './globals.css'
 import Header from "./Header"
-import {Analytics} from "@vercel/analytics/react";
+import { AnalyticsWrapper } from "@/app/components/analytics";
 
 export default function RootLayout({
   children,
@@ -11,9 +11,9 @@ export default function RootLayout({
     <html lang="ja">
       <head />
       <body className={"flex flex-col h-screen"}>
-          <Analytics />
           <Header/>
           {children}
+          <AnalyticsWrapper />
       </body>
     </html>
   )
