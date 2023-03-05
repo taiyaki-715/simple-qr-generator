@@ -1,7 +1,11 @@
 "use client"
 import QRCode from "react-qr-code"
 
-export function QR(props: object) {
+interface QRProps {
+    value: string
+}
+
+export function QR(props: QRProps) {
     return (
         <>
             <QRCode
