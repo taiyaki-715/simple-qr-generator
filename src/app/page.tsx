@@ -1,10 +1,11 @@
 "use client"
-import QRCode from "react-qr-code"
+import { QR } from "@/app/components/QR";
 import {useState} from "react";
-import DownloadButton from "@/app/DownloadButton";
+import DownloadButton from "@/app/components/DownloadButton";
 
 export default function Home() {
-    const [value, setValue] = useState("");
+
+    const [value, setValue] = useState<string>("");
 
   return (
     <div className={"flex flex-col md:flex-row md:items-start w-screen p-8 gap-8 items-center bg-gray-100 flex-1"}>
@@ -16,9 +17,8 @@ export default function Home() {
       >
       </textarea>
       <div className={"flex flex-col w-full gap-8 items-center"}>
-        <QRCode
+        <QR
           value={value}
-          className={"w-full bg-white rounded py-8" + (value ? "" : " blur")}
         />
         <DownloadButton
           linkURL={value}
