@@ -1,7 +1,7 @@
 "use client"
 import QRCode from "react-qr-code"
 import {useState} from "react";
-import DownloadButton from "@/app/DownloadButton";
+import DownloadButton from "@/app/components/DownloadButton";
 
 export default function Home() {
     const [value, setValue] = useState("");
